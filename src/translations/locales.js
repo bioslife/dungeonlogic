@@ -42,7 +42,7 @@ export default {
 		//Sharing
 		"End game caption": "Ты собрал все-все монеты! Поделись игрой со своими друзьями!",
 		'Game is created by Bioslife': "Игра создана Bioslife",
-		'Share text': "Фух, я прошёл все уровни этой игры, погрузись и ты в этот увлекательный мир!"
+		'Share text': "Фух, я прошёл все уровни, погрузись и ты в этот увлекательный мир!"
 	},
 	'en': {
 		'Level': 'Level',
@@ -84,7 +84,7 @@ export default {
 		'Lower block hint': 'Lower block (E or 3)',
 
 		//Sharing
-		'Share text': "I've completed all level of this great game. Immerse yourself in this amazing adventure!",
+		'Share text': "I've completed all levels. Immerse yourself in this amazing adventure!",
 		"End game caption": "You gathered all coins together! Share the game with your friends",
 	}
 };
