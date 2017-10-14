@@ -1,0 +1,28 @@
+.menu {
+	&__splash {
+		font-size: 18px;
+		font-weight: lighter;
+		cursor: pointer;
+		color: #BBB9B6;
+		margin-bottom: 60px;
+
+		transition: 0.5s;
+	}
+	&__training {
+		margin-top: 10px;
+		text-align: center;
+		> span {
+			width: 300px;
+			display: inline-block;
+		}
+	}
+}
+
+.level-selector {
+	margin-top: 40px;
+	&__row {
+		display: flex;
+		justify-content: center;
+
+	}
+}

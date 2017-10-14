@@ -1,0 +1,23 @@
+.header {
+	text-align: center;
+	padding: 20px;
+	border-bottom: 1px dashed #000;
+	&__logo {
+		padding: 20px;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 25px;
+	}
+	&__pages {
+		padding: 20px;
+	}
+	&__page {
+		font-size: 14px;
+		color: #BBB;
+		text-decoration: none;
+		&:not(:first-child) {
+			margin-left: 10px;
+		}
+	}
+}

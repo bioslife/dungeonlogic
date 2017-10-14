@@ -1,0 +1,80 @@
+html, body, #root {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+
+.page {
+	text-align: center;
+	padding: 50px;
+	&__title {
+		font-weight: bold;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-size: 10px;
+	}
+}
+
+.content-wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-title {
+	font-size: 18px;
+	font-weight: lighter;
+	color: #BBB9B6;
+	margin-top: 15px;
+	text-align: center;
+	transition: 0.5s;
+
+	&__content {
+		border-bottom: solid 1px #F4F4F4;
+		display: block;
+		margin-bottom: 10px
+	}
+	&__caption {
+		width: 300px;
+		display: inline-block;
+	}
+}
+
+$button-background: url('../pages/Menu/Button.png');
+
+.hexagon-button {
+
+	text-decoration: none;
+	opacity: 0.7;
+	margin-right: 5px;
+	margin-top: -20px;
+	background: $button-background;
+	width: 79px;
+	height: 92px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 40px;
+	line-height: 92px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: opacity 0.5s;
+	border: none;
+	user-select: none;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&--disabled {
+		opacity: 0.3 !important;
+		pointer-events: none;
+	}
+}

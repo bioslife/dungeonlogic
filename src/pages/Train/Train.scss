@@ -1,0 +1,27 @@
+.game-message {
+	display: flex;
+	color: #bbb9b6;
+	padding: 20px 11px;
+	border-top: solid 1px #F2F2F2;
+
+	text-align: left;
+	align-items: center;
+	white-space: normal;
+	max-width: 360px;
+	height: 110px;
+	transition: height 1s;
+	&__title {
+		line-height: 0.9;
+		margin-bottom: 6px;
+		font-size: 20px;
+	}
+	&__content {
+		line-height: 1.2;
+		transition: height 1s;
+		font-size: 13px;
+
+	}
+	&__icon {
+		margin-right: 24px;
+	}
+}

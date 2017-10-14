@@ -1,0 +1,165 @@
+.block {
+	$root: &;
+	position: absolute;
+	width: 80px;
+	height: 92px;
+	pointer-events: none;
+	transition: left 0.05s, top 0.05s, z-index 0.05s, opacity 0.5s;
+	&--first-block {
+		background: url(Images/first-block.png);
+	}
+	&--second-block {
+		background: url(Images/second-block.png);
+	}
+	&--third-block {
+		background: url(Images/third-block.png);
+	}
+	&--gala-block {
+		background: url(Images/gala-block.png);
+	}
+	&--third-block, &--second-block, &--first-block {
+
+	}
+	&--trodden, &--hovered {
+		cursor: pointer;
+		&:before {
+			pointer-events: none;
+			display: block;
+			width: 80px;
+			height: 92px;
+			content: ' ';
+		}
+	}
+
+	&--trodden {
+		&:before {
+			background: url("Images/path.png");
+		}
+	}
+
+	&--hovered {
+		&:before {
+			background: url("Images/hover.png");
+		}
+	}
+
+	&--hidden {
+		opacity: 0;
+		&.game-block--coin {
+			//transition: none;
+		}
+		&.game-block--bottle {
+			//transition: none;
+		}
+	}
+
+	&--coin {
+		background: url(Images/coin.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		animation-name: coin;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+	&--player {
+		background: url(Images/player.png);
+	}
+	&--boss {
+		background: url(Images/boss.png);
+		//transition: all 0.42s !important;
+		animation-name: boss;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+
+	&--portal {
+		background: url(Images/portal.png);
+		transition: transform 0.2s;
+		animation-name: portal;
+		animation-duration: 6s;
+		animation-iteration-count: infinite;
+	}
+
+	&--monster {
+		background: url(Images/monster.png);
+	}
+	&--bottle {
+		background: url(Images/bottle.png);
+	}
+	&--artifact {
+		background: url(Images/artifact.png);
+	}
+
+	&--exit {
+		background: url(Images/exit.png);
+	}
+	&--exit-locked {
+		background: url(Images/exit-locked.png);
+	}
+	&--transparent {
+		opacity: 0.5;
+	}
+	&--allowed {
+		//pointer-events: all;
+		#{$root}__shadow {
+			pointer-events: all;
+		}
+	}
+
+	&--reachable {
+		//pointer-events: all;
+		#{$root}__shadow {
+			pointer-events: all;
+		}
+	}
+
+	&__shadow {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		top: -5px;
+		left: 10px;
+		width: 60px;
+		height: 60px;
+		background: transparent;
+		// box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		transform: scaleY(0.6) rotate(45deg);
+
+	}
+}
+
+@keyframes coin {
+	0% {
+		background-position: 0 0;
+	}
+	60% {
+		background-position: 0 -5px;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@keyframes boss {
+	0% {
+		transform: scaleY(1);
+	}
+	60% {
+		transform: scaleY(0.97) translateY(1px);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes portal {
+	0% {
+		transform: rotate(0deg);
+	}
+	60% {
+		transform: rotateX(23deg) rotateZ(3deg) rotateY(5deg) translateY(4px);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

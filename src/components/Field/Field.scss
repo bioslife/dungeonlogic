@@ -1,0 +1,22 @@
+.field {
+	transition: height 0.5s, width 0.5s;
+	display: inline-block;
+	position: relative;
+	&:before {
+		content: " ";
+		width: 960px;
+		height: 600px;
+		display: block;
+		background: url(./background.png) 50% 30% no-repeat;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		opacity: 0.5;
+		z-index: -1;
+	}
+	&__content {
+		position: relative;
+		transition: left 0.5s, top 0.5s;
+	}
+}
