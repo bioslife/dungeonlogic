@@ -16,7 +16,7 @@ const config = {
 	output: {
 		filename: 'static/js/bundle.[hash:8].js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/'
+		publicPath: ''
 	},
 
 	module: {
