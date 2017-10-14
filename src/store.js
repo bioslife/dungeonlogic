@@ -10,7 +10,7 @@ import thunk from 'redux-thunk'
 let middlewares = [];
 
 // Create a history of your choosing (we're using a browser history in this case)
-const history = createHistory()
+const history = createHistory({ basename: '/dungeonlogic' })
 
 // Add the router middleware and thunk
 middlewares.push(routerMiddleware(history), thunk);
