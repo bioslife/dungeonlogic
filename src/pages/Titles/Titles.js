@@ -91,7 +91,9 @@ class Titles extends Component {
 						bioslife@yandex.ru
 					</a>
 				</div>
-				<img className="titles__github" src={github} alt=""/>
+				<a href="https://github.com/bioslife/dungeonlogic">
+					<img className="titles__github" src={github} alt=""/>
+				</a>
 
 			</div>
 		)
