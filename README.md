@@ -6,7 +6,7 @@ Use his skill of darkness to collect all coins at the level.
 
 Let's go!
 
-https://bioslife.github.io/dungeonlogic/
+ https://dungeonlogic.herokuapp.com/
 
 Languages
 =====================
