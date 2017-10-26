@@ -277,12 +277,14 @@ export const clickBlock = block => {
 				if (state.game.bottles == 'INFINITY' || state.game.bottles > 0)
 					dispatch(liftBlock(block, true)).then(() => {
 						dispatch(switchTurn());
+						dispatch(setMode("WALK"));
 					});
 			}
 			else if (state.game.mode == 'LOWER' && block.allowed) {
 				if (state.game.bottles == 'INFINITY' || state.game.bottles > 0)
 					dispatch(lowerBlock(block, true)).then(() => {
 						dispatch(switchTurn());
+						dispatch(setMode("WALK"));
 					});
 			}
 			else if (state.game.mode == 'WALK') {
